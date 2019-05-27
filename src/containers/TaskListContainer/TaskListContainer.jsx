@@ -2,19 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as taskActions from '../../store/actions/taskActions';
 import TasksDrawer from '../../components/TasksDrawer/TasksDrawer';
+import AddTaskForm from '../../components/AddTaskForm/AddTaskForm';
 
-class TaskHandler extends Component {
+class TaskListContainer extends Component {
   componentDidMount() {
     this.props.loadTasks();
   }
 
   render() {
     const { tasks } = this.props;
-    return (
-      <>
-        <TasksDrawer tasks={tasks} />
-      </>
-    );
+    return <TasksDrawer tasks={tasks} />;
   }
 }
 
@@ -29,4 +26,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TaskHandler);
+)(TaskListContainer);

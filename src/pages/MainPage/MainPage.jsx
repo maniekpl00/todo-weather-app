@@ -1,13 +1,13 @@
 import React from 'react';
 import PageLayout from '../../layouts/PageLayout/PageLayout';
 import WeatherHandler from '../../containers/WeatherHandler/WeatherHandler';
-import TaskHandler from '../../containers/TaskHandler/TaskHandler';
+import TaskListContainer from '../../containers/TaskListContainer/TaskListContainer';
 
 const MainPage = () => {
   return (
     <PageLayout>
       <WeatherHandler />
-      <TaskHandler />
+      <TaskListContainer />
     </PageLayout>
   );
 };
