@@ -32,10 +32,6 @@ export const DarkSwitcherButton = styled(Button)`
 
 export const ChildrenContainer = styled.main`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100%;
-
-  @media (max-width: ${mediaQueries.desktopMaxWidth}) {
-    flex-direction: column;
-  }
 `;

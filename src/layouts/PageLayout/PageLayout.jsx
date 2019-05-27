@@ -31,10 +31,10 @@ class PageLayout extends Component {
       <ThemeProvider theme={themes[theme]}>
         <StyledPageLayout>
           <GlobalStyle />
-          <ThemeButtonContainer>
+          {/* <ThemeButtonContainer>
             <LightSwitcherButton onClick={this.switchToLightThemeHandler}>Light</LightSwitcherButton>
             <DarkSwitcherButton onClick={this.switchToDarkThemeHandler}>Dark</DarkSwitcherButton>
-          </ThemeButtonContainer>
+          </ThemeButtonContainer> */}
           <ChildrenContainer>{children}</ChildrenContainer>
         </StyledPageLayout>
       </ThemeProvider>
