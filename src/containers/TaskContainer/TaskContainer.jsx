@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as taskActions from '../../store/actions/taskActions';
-import TaskList from '../../components/TaskList/TaskList';
+import Task from '../../components/Task/Task';
 
-class TaskListContainer extends Component {
+class TaskContainer extends Component {
   componentDidMount() {
     this.props.loadTasks();
   }
 
   render() {
     const { tasks } = this.props;
-    return <TaskList tasks={tasks} />;
+    return <Task tasks={tasks} />;
   }
 }
 
@@ -25,4 +25,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TaskListContainer);
+)(TaskContainer);
