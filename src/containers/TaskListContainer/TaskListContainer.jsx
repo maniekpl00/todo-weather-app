@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as taskActions from '../../store/actions/taskActions';
 import TasksDrawer from '../../components/TasksDrawer/TasksDrawer';
-import AddTaskForm from '../../components/AddTaskForm/AddTaskForm';
 
 class TaskListContainer extends Component {
   componentDidMount() {

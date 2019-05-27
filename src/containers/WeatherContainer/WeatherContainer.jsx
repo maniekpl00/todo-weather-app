@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import WeatherDrawer from '../../components/WeatherDrawer/WeatherDrawer';
 
-class WeatherHandler extends Component {
+class WeatherContainer extends Component {
   render() {
     return <WeatherDrawer />;
   }
 }
 
-export default WeatherHandler;
+export default WeatherContainer;
