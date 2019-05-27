@@ -49,13 +49,15 @@ class TaskContainer extends Component {
     const { taskForm, showModal } = this.state;
     const { tasks } = this.props;
     return (
-      <TaskWrapper>
+      <>
+        <TaskWrapper>
+          <TaskList tasks={tasks} />
+          <TaskAddButton clicked={this.toggleModalHandler} />
+        </TaskWrapper>
         <Modal show={showModal}>
           <TaskAddForm task={taskForm} changed={this.inputChangehandler} submitted={this.addTaskSubmitHandler} />
         </Modal>
-        <TaskList tasks={tasks} />
-        <TaskAddButton clicked={this.toggleModalHandler} />
-      </TaskWrapper>
+      </>
     );
   }
 }

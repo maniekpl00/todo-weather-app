@@ -9,14 +9,14 @@ class TaskItem extends Component {
     this.props.updateTask({
       ...this.props.item,
       finished: event.target.checked
-    })
-  }
+    });
+  };
 
   render() {
     const { item } = this.props;
     return (
       <StyledTaskItem>
-        <CheckBox type="checkbox" checked={item.finished} onChange={this.checkChangeHandler} />
+          <CheckBox type="checkbox" checked={item.finished} onChange={this.checkChangeHandler} />
         <TaskLabel name={item.name} tag={item.tag} finished={item.finished} />
       </StyledTaskItem>
     );

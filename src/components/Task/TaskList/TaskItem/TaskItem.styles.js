@@ -3,11 +3,13 @@ import styled from 'styled-components';
 export const StyledTaskItem = styled.li`
   display: flex;
   align-items: center;
-  padding: 15px;
+  justify-content: space-around;
+  padding: 15px 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 `;
 
 export const CheckBox = styled.input`
+  display: block;
   position: relative;
   visibility: hidden;
   width: 25px;
