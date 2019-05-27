@@ -1,6 +1,6 @@
 {
   "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "flowtype", "import", "jsx-a11y", "react", "react-hooks"],
   "rules": {
     "react/jsx-filename-extension": [
       1,
@@ -12,6 +12,7 @@
     "react/prop-types": 0,
     "react/prefer-stateless-function": 0,
     "react/destructuring-assignment": 0,
+    "react/button-has-type": 0,
     "import/prefer-default-export": 0,
     "no-underscore-dangle": 0,
     "import/imports-first": ["error", "absolute-first"],

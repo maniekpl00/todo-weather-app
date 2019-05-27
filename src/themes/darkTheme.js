@@ -1,5 +1,5 @@
 const darkTheme = {
-  backgroundColor: "black",
+  taskBackgroundColor: "black",
   color: "white"
 }
 
