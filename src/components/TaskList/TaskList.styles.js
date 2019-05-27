@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledTasksDrawer = styled.section`
+export const StyledTaskList = styled.section`
   flex-basis: 50%;
   display: flex;
   flex-direction: column;

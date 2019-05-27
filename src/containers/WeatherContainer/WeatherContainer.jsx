@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import WeatherDrawer from '../../components/WeatherDrawer/WeatherDrawer';
+import Weather from '../../components/Weather/Weather';
 
 class WeatherContainer extends Component {
   render() {
-    return <WeatherDrawer />;
+    return <Weather />;
   }
 }
 

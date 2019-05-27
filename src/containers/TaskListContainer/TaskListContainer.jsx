@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as taskActions from '../../store/actions/taskActions';
-import TasksDrawer from '../../components/TasksDrawer/TasksDrawer';
+import TaskList from '../../components/TaskList/TaskList';
 
 class TaskListContainer extends Component {
   componentDidMount() {
@@ -10,7 +10,7 @@ class TaskListContainer extends Component {
 
   render() {
     const { tasks } = this.props;
-    return <TasksDrawer tasks={tasks} />;
+    return <TaskList tasks={tasks} />;
   }
 }
 
