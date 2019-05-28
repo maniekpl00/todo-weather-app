@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledTaskLabel = styled.div`
-  width: 80%;
+  width: 70%;
   display: flex;
   flex-direction: column;
 `;

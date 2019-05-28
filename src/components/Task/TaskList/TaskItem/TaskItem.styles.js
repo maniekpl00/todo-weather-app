@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 export const StyledTaskItem = styled.li`
   display: flex;
@@ -29,7 +30,7 @@ export const CheckBox = styled.input`
     top: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid rgba(0, 0, 0, 0.4);
+    border: 2px solid ${props => props.theme.primaryColor};
     border-radius: 50%;
     z-index: 2;
   }
@@ -37,8 +38,16 @@ export const CheckBox = styled.input`
   &:checked {
     &::before {
       content: '✓';
-      border-color: #50ac5d;
-      background-color: #50ac5d;
+      background-color: ${props => props.theme.primaryColor};
+    }
+  }
+`;
+
+export const DeleteButton = styled(DeleteIcon)`
+  && {
+    path {
+      font-size: 2rem;
+      color: ${props => props.theme.primaryColor};
     }
   }
 `;

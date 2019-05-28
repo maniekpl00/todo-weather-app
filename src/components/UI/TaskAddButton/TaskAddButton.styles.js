@@ -12,9 +12,8 @@ export const AddButton = styled.button`
   display: flex;
   width: 30px;
   line-height: 30px;
-  font-size: 33px;
-  font-weight: bold;
-  background-color: royalblue;
+  font-size: 32px;
+  background-color: ${props => props.theme.primaryColor};
   color: white;
   border: none;
   border-radius: 50%;

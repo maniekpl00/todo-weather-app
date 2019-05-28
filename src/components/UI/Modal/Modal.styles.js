@@ -7,10 +7,11 @@ export const StyledModal = styled.div`
   background-color: white;
   width: 100vw;
   height: 100vh;
-  transform: ${props => props.show ? "translateY(0)" : "translateY(-100%)"};
+  transform: ${props => (props.show ? 'translateY(0)' : 'translateY(100%)')};
   z-index: 500;
-  transition: 0.4s;
+  transition: 0.3s;
 `;
 
 export const ModalWrapper = styled.div`
-`
+  height: 100%;
+`;

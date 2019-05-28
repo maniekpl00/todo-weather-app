@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import uuid from 'uuid';
+import moment from 'moment';
 import * as taskActions from '../../store/actions/taskActions';
 import TaskWrapper from '../../components/Task/TaskWrapper/TaskWrapper';
 import TaskList from '../../components/Task/TaskList/TaskList';
@@ -10,9 +11,10 @@ import TaskAddForm from '../../components/Task/TaskAddForm/TaskAddForm';
 
 class TaskContainer extends Component {
   state = {
-    taskForm: {
+    newTaskForm: {
       name: '',
-      tag: ''
+      tag: '',
+      term: moment()
     },
     showModal: false
   };
@@ -21,12 +23,21 @@ class TaskContainer extends Component {
     this.props.loadTasks();
   }
 
-  inputChangehandler = event => {
+  textChangeHandler = event => {
     const { name, value } = event.target;
     this.setState(prevState => ({
-      taskForm: {
-        ...prevState.taskForm,
+      newTaskForm: {
+        ...prevState.newTaskForm,
         [name]: value
+      }
+    }));
+  };
+
+  dateChangeHandler = term => {
+    this.setState(prevState => ({
+      newTaskForm: {
+        ...prevState.newTaskForm,
+        term
       }
     }));
   };
@@ -34,10 +45,12 @@ class TaskContainer extends Component {
   addTaskSubmitHandler = event => {
     event.preventDefault();
     const task = {
+      ...this.state.newTaskForm,
       id: uuid.v4(),
-      ...this.state.taskForm,
-      finished: false
+      finished: false,
+      term: this.state.newTaskForm.term.unix()
     };
+    console.log(task);
     this.props.addTask(task);
   };
 
@@ -46,16 +59,21 @@ class TaskContainer extends Component {
   };
 
   render() {
-    const { taskForm, showModal } = this.state;
+    const { newTaskForm, showModal } = this.state;
     const { tasks } = this.props;
     return (
       <>
         <TaskWrapper>
-          <TaskList tasks={tasks} />
+          <TaskList tasks={tasks} removeTask={this.props.removeTask} />
           <TaskAddButton clicked={this.toggleModalHandler} />
         </TaskWrapper>
         <Modal show={showModal}>
-          <TaskAddForm task={taskForm} changed={this.inputChangehandler} submitted={this.addTaskSubmitHandler} />
+          <TaskAddForm
+            task={newTaskForm}
+            textChanged={this.textChangeHandler}
+            dateChanged={this.dateChangeHandler}
+            submitted={this.addTaskSubmitHandler}
+          />
         </Modal>
       </>
     );
@@ -68,7 +86,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   loadTasks: taskActions.loadTasks,
-  addTask: taskActions.addTask
+  addTask: taskActions.addTask,
+  removeTask: taskActions.removeTask
 };
 
 export default connect(
