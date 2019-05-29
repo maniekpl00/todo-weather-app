@@ -45,8 +45,9 @@ export const CheckBox = styled.input`
 
 export const DeleteButton = styled(DeleteIcon)`
   && {
+    font-size: 2rem;
+
     path {
-      font-size: 2rem;
       color: ${props => props.theme.primaryColor};
     }
   }

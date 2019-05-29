@@ -11,9 +11,14 @@ export const StyledTaskAddForm = styled.form`
   /* justify-self: flex-end; */
 `;
 
-export const TaskInput = styled.input`
+export const InputContainer = styled.div`
   width: 80%;
-  margin-bottom: 30px;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const TaskInput = styled.input`
   padding: 10px 20px;
   font-size: 1.2rem;
   border: none;
@@ -27,8 +32,6 @@ export const TaskInput = styled.input`
 
 export const DateInput = styled(DatePicker)`
   && {
-    width: 80%;
-    margin-bottom: 30px;
     border-bottom: 2px solid ${props => props.theme.primaryColor};
 
     div::before {
@@ -52,7 +55,17 @@ export const DateInput = styled(DatePicker)`
   }
 `;
 
+export const ErrorMessage = styled.span`
+  display: block;
+  margin: 0;
+  padding: 2px 0;
+  font-size: 0.8rem;
+  flex-basis: 30px;
+  color: red;
+`;
+
 export const TaskSubmitButton = styled.button`
+  margin-top: 30px;
   padding: 10px 20px;
   font-size: 1.1rem;
   text-transform: uppercase;

@@ -12,9 +12,21 @@ import TaskAddForm from '../../components/Task/TaskAddForm/TaskAddForm';
 class TaskContainer extends Component {
   state = {
     newTaskForm: {
-      name: '',
-      tag: '',
-      term: moment()
+      name: {
+        value: '',
+        placeholder: 'Task name',
+        error: false
+      },
+      tag: {
+        value: '',
+        placeholder: 'Tag',
+        error: false
+      },
+      term: {
+        value: moment(),
+        label: 'Term',
+        error: false
+      }
     },
     showModal: false
   };
@@ -28,34 +40,116 @@ class TaskContainer extends Component {
     this.setState(prevState => ({
       newTaskForm: {
         ...prevState.newTaskForm,
-        [name]: value
+        [name]: {
+          ...prevState.newTaskForm[name],
+          value
+        }
       }
     }));
   };
 
-  dateChangeHandler = term => {
+  dateChangeHandler = date => {
     this.setState(prevState => ({
       newTaskForm: {
         ...prevState.newTaskForm,
-        term
+        term: {
+          ...prevState.newTaskForm.term,
+          value: date
+        }
+      }
+    }));
+  };
+
+  validateForm = () => {
+    const { newTaskForm } = this.state;
+    const { name, tag, term } = newTaskForm;
+
+    let validate = true;
+    let nameError = false;
+    let tagError = false;
+    let termError = false;
+    if (name.value.trim().length < 4) {
+      nameError = 'Task name must have at least 4 characters';
+      validate = false;
+    }
+    if (tag.value.trim().length < 2) {
+      tagError = 'Tag must have at least 2 characters';
+      validate = false;
+    }
+    if (term.value.toDate().getDate() < new Date().getDate()) {
+      termError = 'The term date must be today or after today';
+    }
+    this.setState(prevState => ({
+      newTaskForm: {
+        ...prevState.newTaskForm,
+        name: {
+          ...prevState.newTaskForm.name,
+          error: nameError
+        },
+        tag: {
+          ...prevState.newTaskForm.tag,
+          error: tagError
+        },
+        term: {
+          ...prevState.newTaskForm.term,
+          error: termError
+        }
+      }
+    }));
+    return validate;
+  };
+
+  resetFormSettings = () => {
+    this.setState(prevState => ({
+      newTaskForm: {
+        ...prevState.newTaskForm,
+        name: {
+          ...prevState.newTaskForm.name,
+          value: '',
+          error: false
+        },
+        tag: {
+          ...prevState.newTaskForm.tag,
+          value: '',
+          error: false
+        },
+        term: {
+          ...prevState.newTaskForm.term,
+          value: moment(),
+          error: false
+        }
       }
     }));
   };
 
   addTaskSubmitHandler = event => {
     event.preventDefault();
+    if (!this.validateForm()) {
+      return;
+    }
+    const { newTaskForm } = this.state;
+    const name = newTaskForm.name.value;
+    const tag = newTaskForm.tag.value;
+    const term = newTaskForm.term.value.unix();
     const task = {
-      ...this.state.newTaskForm,
       id: uuid.v4(),
-      finished: false,
-      term: this.state.newTaskForm.term.unix()
+      name,
+      tag,
+      term,
+      finished: false
     };
-    console.log(task);
     this.props.addTask(task);
+    this.resetFormSettings();
+    this.cancelModalHandler();
   };
 
-  toggleModalHandler = () => {
-    this.setState(prevState => ({ showModal: !prevState.showModal }));
+  showModalHandler = () => {
+    this.setState({ showModal: true });
+  };
+
+  cancelModalHandler = () => {
+    this.resetFormSettings();
+    this.setState({ showModal: false });
   };
 
   render() {
@@ -65,9 +159,9 @@ class TaskContainer extends Component {
       <>
         <TaskWrapper>
           <TaskList tasks={tasks} removeTask={this.props.removeTask} />
-          <TaskAddButton clicked={this.toggleModalHandler} />
+          <TaskAddButton clicked={this.showModalHandler} />
         </TaskWrapper>
-        <Modal show={showModal}>
+        <Modal show={showModal} canceled={this.cancelModalHandler}>
           <TaskAddForm
             task={newTaskForm}
             textChanged={this.textChangeHandler}
