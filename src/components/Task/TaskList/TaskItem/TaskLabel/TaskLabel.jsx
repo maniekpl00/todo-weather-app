@@ -1,10 +1,24 @@
 import React from 'react';
-import { StyledTaskLabel, TaskNameSpan, TaskTagSpan } from './TaskLabel.styles';
+import { CalendarToday as TermIcon } from '@material-ui/icons';
+import {
+  StyledTaskLabel,
+  TaskNameSpan,
+  TaskBottomWrapper,
+  TaskTagSpan,
+  TaskTermWrapper,
+  TaskTermSpan
+} from './TaskLabel.styles';
 
-const TaskLabel = ({ name, tag, finished }) => (
+const TaskLabel = ({ name, tag, finished, term, termAlerted }) => (
   <StyledTaskLabel>
     <TaskNameSpan finished={finished}>{name}</TaskNameSpan>
-    <TaskTagSpan>{tag}</TaskTagSpan>
+    <TaskBottomWrapper>
+      <TaskTagSpan>{tag}</TaskTagSpan>
+      <TaskTermWrapper alerted={termAlerted}>
+        <TermIcon />
+        <TaskTermSpan>{term}</TaskTermSpan>
+      </TaskTermWrapper>
+    </TaskBottomWrapper>
   </StyledTaskLabel>
 );
 

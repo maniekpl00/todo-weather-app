@@ -58,7 +58,7 @@ export const DateInput = styled(DatePicker)`
 export const ErrorMessage = styled.span`
   display: block;
   margin: 0;
-  padding: 2px 0;
+  padding-top: 5px;
   font-size: 0.8rem;
   flex-basis: 30px;
   color: red;

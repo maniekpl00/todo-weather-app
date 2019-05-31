@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import DeleteIcon from '@material-ui/icons/Delete';
+import { Delete as DeleteIcon } from '@material-ui/icons';
 
 export const StyledTaskItem = styled.li`
+  max-height: 20%;
   display: flex;
   align-items: center;
   justify-content: space-around;

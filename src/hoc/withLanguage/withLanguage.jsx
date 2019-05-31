@@ -10,7 +10,7 @@ const withLanguage = WrappedComponent => {
     state = {
       locale: 'en'
     };
-
+    
     render() {
       moment.locale(this.state.locale);
       const newProps = {
