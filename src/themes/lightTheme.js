@@ -1,5 +1,6 @@
 const lightTheme = {
-  backgroundColor: '#fff',
+  taskBackgroundColor: '#fff',
+  primaryColor: "royalblue",
   color: 'black'
 };
 

@@ -16,7 +16,8 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  button {
+  button, 
+  input {
     outline: none;
   }
 `;

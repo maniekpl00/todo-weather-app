@@ -1,6 +1,6 @@
 {
   "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "react"],
   "rules": {
     "react/jsx-filename-extension": [
       1,
@@ -12,10 +12,13 @@
     "react/prop-types": 0,
     "react/prefer-stateless-function": 0,
     "react/destructuring-assignment": 0,
+    "react/button-has-type": 0,
     "import/prefer-default-export": 0,
     "no-underscore-dangle": 0,
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
     "no-use-before-define": 0,
     "no-param-reassign": 0,
     "no-unused-vars": "warn"

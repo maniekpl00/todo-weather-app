@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+import mediaQueries from '../../styles/mediaQueries';
 
-export const LayoutContainer = styled.div`
+export const StyledPageLayout = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: ${props => props.theme.backgroundColor};
-  color: ${props => props.theme.color}
+  color: ${props => props.theme.color};
 `;
 
 export const ThemeButtonContainer = styled.div`
@@ -28,4 +28,10 @@ export const LightSwitcherButton = styled(Button)`
 
 export const DarkSwitcherButton = styled(Button)`
   background-color: #555;
+`;
+
+export const ChildrenContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `;
