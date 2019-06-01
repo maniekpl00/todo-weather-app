@@ -7,6 +7,7 @@ export const StyledWeatherWidget = styled.div`
 `;
 
 export const WeatherTopContainer = styled.section`
+  height: 33%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,17 +21,24 @@ export const WeatherIcon = styled.img`
 export const WeatherTemperature = styled.span``;
 
 export const WeatherCenterContainer = styled.div`
+  height: 33%;
   text-transform: capitalize;
-	text-align: center;
+  display: flex;
+	justify-content: center;
+  align-items: center;
 	padding: 10px 0;
 `;
 
 export const WeatherBottomContainer = styled.section`
+  height: 33%;
 	display: flex;
 	justify-content: space-around;
+  align-items: center;
 	padding: 10px 0;
 `;
 
-export const WeatherPressure = styled.span``;
+export const WeatherPressure = styled.span`
+`;
 
-export const WeatherWindSpeed = styled.span``;
+export const WeatherWindSpeed = styled.span`
+`;

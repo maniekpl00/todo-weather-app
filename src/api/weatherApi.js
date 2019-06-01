@@ -55,17 +55,18 @@ function mock() {
 }
 
 export default {
-	fetchWeather(city) {
+	fetchWeather(latitude, longitude) {
 		const params = {
-			q: city,
+      lat: latitude,
+      lon: longitude,
 			units: 'metric',
 			APPID: process.env.REACT_APP_APPID,
 		};
 		return instance.get(`/weather`, { params });
 	},
 
-	fetchMockWeather(city) {
+	fetchMockWeather(latitude, longitude) {
 		const apiData = mock();
-		return new Promise(resolve => setTimeout(() => resolve(apiData), 500));
+		return new Promise(resolve => setTimeout(() => resolve(apiData), 700));
 	},
 };

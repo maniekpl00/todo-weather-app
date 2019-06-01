@@ -12,20 +12,23 @@ import {
 
 const WeatherWidget = ({ data }) => {
 	const { temp, pressure } = data.main;
-	const { icon, description } = data.weather[0];
-	const windSpeed = data.wind.speed;
-	const iconSrc = `http://openweathermap.org/img/w/${icon}.png`;
+  const { icon, description } = data.weather[0];
+	const locationName = data.name;
+	const windSpeed = data.wind.speed * 3.6;
+  const iconSrc = `http://openweathermap.org/img/w/${icon}.png`;
 
 	return (
 		<StyledWeatherWidget>
 			<WeatherTopContainer>
 				<WeatherIcon src={iconSrc} />
-				<WeatherTemperature>{temp.toFixed()} &#8451;</WeatherTemperature>
+				<WeatherTemperature>
+					{temp.toFixed()} &#8451;, {locationName}
+				</WeatherTemperature>
 			</WeatherTopContainer>
 			<WeatherCenterContainer>{description}</WeatherCenterContainer>
 			<WeatherBottomContainer>
 				<WeatherPressure>{pressure} hPa</WeatherPressure>
-				<WeatherWindSpeed>{windSpeed} meter/sec</WeatherWindSpeed>
+				<WeatherWindSpeed>{windSpeed} km/h</WeatherWindSpeed>
 			</WeatherBottomContainer>
 		</StyledWeatherWidget>
 	);
