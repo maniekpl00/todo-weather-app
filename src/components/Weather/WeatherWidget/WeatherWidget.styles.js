@@ -1,44 +1,63 @@
 import styled from 'styled-components';
+import mediaQueries from '../../../styles/mediaQueries';
 
 export const StyledWeatherWidget = styled.div`
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+
+  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+    flex-direction: column;
+  }
 `;
 
-export const WeatherTopContainer = styled.section`
-  height: 33%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+export const LeftContainer = styled.section`
+  flex-basis: 50%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+    margin-right: 0;
+    align-items: center;
+  }
+`;
+
+export const RightContainer = styled.section`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export const WeatherIcon = styled.img`
-  width: 45px;
-  height: 45px;
+  width: 70px;
+  height: 70px;
+
+  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
-export const WeatherTemperature = styled.span``;
-
-export const WeatherCenterContainer = styled.div`
-  height: 33%;
-  text-transform: capitalize;
-  display: flex;
-	justify-content: center;
-  align-items: center;
-	padding: 10px 0;
+export const TemperatureOfLocation = styled.span`
+  font-weight: bold;
+  font-size: 1.2em;
 `;
 
-export const WeatherBottomContainer = styled.section`
-  height: 33%;
-	display: flex;
-	justify-content: space-around;
-  align-items: center;
-	padding: 10px 0;
+export const Description = styled.span`
+  &::first-letter {
+    text-transform: uppercase;
+  }
 `;
 
-export const WeatherPressure = styled.span`
-`;
+export const LastUpdateTime = styled.div``;
 
-export const WeatherWindSpeed = styled.span`
-`;
+export const Pressure = styled.span``;
+
+export const WindSpeed = styled.span``;
+
+export const Humadity = styled.span``;

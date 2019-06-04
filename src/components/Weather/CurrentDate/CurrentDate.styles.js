@@ -1,11 +1,17 @@
 import styled from 'styled-components';
+import mediaQueries from '../../../styles/mediaQueries';
 
 export const StyledCurrentDate = styled.div`
-	padding: 20px 15px 15px 15px;
+
+  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+    text-align: center;
+  }
 `;
 
 export const DateTitle = styled.span`
-	text-transform: capitalize;
-	font-size: 1.3rem;
-	color: white;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.35em;
+  color: white;
 `;
