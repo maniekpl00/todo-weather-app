@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledTaskWrapper } from './TaskWrapper.styles';
+import { StyledTaskWrapper } from './index.styles';
 
 const TaskWrapper = ({ children }) => {
   return <StyledTaskWrapper>{children}</StyledTaskWrapper>;

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl';
 import * as languageActions from '../../store/actions/languageActions';
 import languages from '../../translations';
-import Selector from '../../components/UI/Selector/Selector';
+import Selector from '../../components/UI/Selector';
 import messages from './messages';
 
 class LanguageSelectHandler extends Component {

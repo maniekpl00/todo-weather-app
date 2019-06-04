@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import { intervalTime, DATE_FORMAT } from './constants';
-import { StyledClock } from './Clock.styles';
+import { StyledClock } from './index.styles';
 
 class Clock extends Component {
   state = {

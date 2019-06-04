@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledSelector, FormControl, Select, MenuItem, FormHelperText } from './Selector.styles';
+import { StyledSelector, FormControl, Select, MenuItem, FormHelperText } from './index.styles';
 
 const Selector = ({ open, value, options, label, ...props }) => (
 	<StyledSelector>

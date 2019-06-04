@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import * as taskActions from '../../../../store/actions/taskActions';
-import { StyledTaskItem, CheckBox, DeleteButton } from './TaskItem.styles';
-import TaskLabel from './TaskLabel/TaskLabel';
+import { StyledTaskItem, CheckBox, DeleteButton } from './index.styles';
+import TaskLabel from './TaskLabel';
 
 class TaskItem extends Component {
   checkChangeHandler = event => {

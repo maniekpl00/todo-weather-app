@@ -1,7 +1,7 @@
 import React from 'react';
 import {ReactComponent as BarsSolid} from '../../../assets/bars-solid.svg';
 import {ReactComponent as TimesSolid} from '../../../assets/times-solid.svg';
-import { StyledBurgerIcon } from './BurgerIcon.styles';
+import { StyledBurgerIcon } from './index.styles';
 
 const BurgerIcon = ({ open, ...props }) => {
   

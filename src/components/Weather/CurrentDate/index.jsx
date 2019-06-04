@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCurrentDate, DateTitle } from './CurrentDate.styles';
+import { StyledCurrentDate, DateTitle } from './index.styles';
 
 const CurrentDate = ({ date }) => (
 	<StyledCurrentDate>

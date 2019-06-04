@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import moment from 'moment';
-import WeatherWrapper from '../../components/Weather/WeatherWrapper/WeatherWrapper';
+import WeatherWrapper from '../../components/Weather/WeatherWrapper';
 import weatherApi from '../../api/weatherApi';
-import CurrentDate from '../../components/Weather/CurrentDate/CurrentDate';
-import WeatherWidget from '../../components/Weather/WeatherWidget/WeatherWidget';
-import Spinner from '../../components/UI/Spinner/Spinner';
+import CurrentDate from '../../components/Weather/CurrentDate';
+import WeatherWidget from '../../components/Weather/WeatherWidget';
+import Spinner from '../../components/UI/Spinner';
 
 class WeatherContainer extends Component {
   state = {

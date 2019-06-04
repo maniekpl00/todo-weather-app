@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Modal from '../../components/UI/Modal/Modal';
-import BurgerIcon from '../../components/UI/BurgerIcon/BurgerIcon';
-import MenuWrapper from '../../components/Menu/MenuWrapper/MenuWrapper';
-import MenuDrawer from '../../components/Menu/MenuDrawer/MenuDrawer';
-import LanguageSelectHandler from '../LanguageSelectHandler/LanguageSelectHandler';
-import ThemeSelectHandler from '../ThemeSelectHandler/ThemeSelectHandler';
+import Modal from '../../components/UI/Modal';
+import BurgerIcon from '../../components/UI/BurgerIcon';
+import MenuWrapper from '../../components/Menu/MenuWrapper';
+import MenuDrawer from '../../components/Menu/MenuDrawer';
+import LanguageSelectHandler from '../LanguageSelectHandler';
+import ThemeSelectHandler from '../ThemeSelectHandler';
 
 class MenuContainer extends Component {
   state = {

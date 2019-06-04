@@ -11,8 +11,8 @@ import {
   Pressure,
   WindSpeed,
   Humadity,
-} from './WeatherWidget.styles';
-import Clock from '../Clock/Clock';
+} from './index.styles';
+import Clock from '../Clock';
 
 const WeatherWidget = ({ data, intl }) => {
   const { temp, pressure, humidity } = data.main;

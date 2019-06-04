@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledWeatherWrapper } from './WeatherWrapper.styles';
+import { StyledWeatherWrapper } from './index.styles';
 
 const WeatherWrapper = ({ children }) => <StyledWeatherWrapper>{children}</StyledWeatherWrapper>;
 

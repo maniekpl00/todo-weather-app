@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledMenuWrapper } from './MenuWrapper.styles';
+import { StyledMenuWrapper } from './index.styles';
 
 const MenuWrapper = ({ children, show }) => (
 	<StyledMenuWrapper show={show}>{children}</StyledMenuWrapper>

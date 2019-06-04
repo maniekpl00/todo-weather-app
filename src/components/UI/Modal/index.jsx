@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledModal, ModalWrapper } from './Modal.styles';
+import { StyledModal, ModalWrapper } from './index.styles';
 
 const Modal = props => (
   <StyledModal show={props.show}>

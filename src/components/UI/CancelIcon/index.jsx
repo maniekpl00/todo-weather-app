@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCancelIcon } from './CancelIcon.styles';
+import { StyledCancelIcon } from './index.styles';
 
 const CancelIcon = props => <StyledCancelIcon onClick={props.clicked} />;
 

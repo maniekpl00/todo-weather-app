@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledTaskList, List } from './TaskList.styles';
-import TaskItem from './TaskItem/TaskItem';
+import { StyledTaskList, List } from './index.styles';
+import TaskItem from './TaskItem';
 
 const TaskList = props => {
   const tasks = props.tasks.map(task => (

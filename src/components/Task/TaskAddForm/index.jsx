@@ -7,7 +7,7 @@ import {
 	DateInput,
 	ErrorMessage,
 	TaskSubmitButton,
-} from './TaskAddForm.styles';
+} from './index.styles';
 import messages from './messages';
 
 const TaskAddForm = ({ task, textChanged, dateChanged, submitted, intl }) => {
