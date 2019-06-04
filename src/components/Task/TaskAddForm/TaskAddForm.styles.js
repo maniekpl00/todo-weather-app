@@ -22,7 +22,7 @@ export const TaskInput = styled.input`
   padding: 10px 20px;
   font-size: 1.2rem;
   border: none;
-  border-bottom: 2px solid ${props => props.theme.primaryColor};
+  border-bottom: 1px solid ${props => props.theme.primaryColor};
   color: ${props => props.theme.primaryColor};
 
   &::placeholder {
@@ -32,7 +32,7 @@ export const TaskInput = styled.input`
 
 export const DateInput = styled(DatePicker)`
   && {
-    border-bottom: 2px solid ${props => props.theme.primaryColor};
+    border-bottom: 1px solid ${props => props.theme.primaryColor};
 
     div::before {
       display: none;

@@ -1,13 +1,11 @@
-import darkTheme from './darkTheme';
-import lightTheme from './lightTheme';
+import blueTheme from './blueTheme';
+import greenTheme from './greenTheme';
 
-export const DEFAULT_THEME = "lightTheme";
-export const LIGHT_THEME = "lightTheme";
-export const DARK_THEME = "darkTheme";
+export const DEFAULT_THEME = "greenTheme";
 
 const themes = {
-  lightTheme,
-  darkTheme
+  blueTheme,
+  greenTheme
 };
 
 export default themes;

@@ -4,9 +4,6 @@ import taskService from '../../services/taskService';
 
 export default function tasksReducer(state = initialState.tasks, action) {
   switch (action.type) {
-    case actionTypes.LOAD_TASKS:
-      return taskService.loadTasks();
-      
     case actionTypes.ADD_TASK:
       return taskService.addTask(action.task);
 
