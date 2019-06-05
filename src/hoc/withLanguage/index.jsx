@@ -15,34 +15,34 @@ import messagesPl from '../../translations/pl.json';
 addLocaleData([...localeEn, ...localePl]);
 
 const messages = {
-	en: messagesEn,
-	pl: messagesPl,
+  en: messagesEn,
+  pl: messagesPl,
 };
 
 const withLanguage = WrappedComponent => {
-	return class extends Component {
-		render() {
-			const { language } = this.props;
-			moment.locale(language);
+  return class extends Component {
+    render() {
+      const { language } = this.props;
+      moment.locale(language);
 
-			return (
-				<IntlProvider key={language} locale={language} messages={messages[language]}>
-					<MuiPickersUtilsProvider utils={MomentUtils} locale={language} moment={moment}>
-						<WrappedComponent {...this.props} />
-					</MuiPickersUtilsProvider>
-				</IntlProvider>
-			);
-		}
-	};
+      return (
+        <IntlProvider key={language} locale={language} messages={messages[language]}>
+          <MuiPickersUtilsProvider utils={MomentUtils} locale={language} moment={moment}>
+            <WrappedComponent {...this.props} />
+          </MuiPickersUtilsProvider>
+        </IntlProvider>
+      );
+    }
+  };
 };
 
 const mapStateToProps = state => ({
-	language: state.language,
+  language: state.language,
 });
 
 const composedHoc = compose(
-	connect(mapStateToProps),
-	withLanguage
+  connect(mapStateToProps),
+  withLanguage
 );
 
 export default composedHoc;

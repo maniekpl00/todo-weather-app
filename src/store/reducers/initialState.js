@@ -5,5 +5,5 @@ import themeService from '../../services/themeService';
 export default {
   tasks: taskService.loadTasks(),
   theme: themeService.loadTheme(),
-  language: languageService.loadLanguage()
+  language: languageService.loadLanguage(),
 };

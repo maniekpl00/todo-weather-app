@@ -6,5 +6,5 @@ import language from './languageReducer';
 export default combineReducers({
   tasks,
   theme,
-  language
+  language,
 });

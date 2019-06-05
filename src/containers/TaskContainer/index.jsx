@@ -5,12 +5,12 @@ import moment from 'moment';
 import { injectIntl } from 'react-intl';
 import * as taskActions from '../../store/actions/taskActions';
 import messages from './messages';
-import TaskWrapper from '../../components/Task/TaskWrapper/TaskWrapper';
-import TaskList from '../../components/Task/TaskList/TaskList';
-import TaskAddButton from '../../components/UI/TaskAddButton/TaskAddButton';
-import Modal from '../../components/UI/Modal/Modal';
-import TaskAddForm from '../../components/Task/TaskAddForm/TaskAddForm';
-import CancelIcon from '../../components/UI/CancelIcon/CancelIcon';
+import TaskWrapper from '../../components/Task/TaskWrapper';
+import TaskList from '../../components/Task/TaskList';
+import TaskAddButton from '../../components/UI/TaskAddButton';
+import Modal from '../../components/UI/Modal';
+import TaskAddForm from '../../components/Task/TaskAddForm';
+import CancelIcon from '../../components/UI/CancelIcon';
 
 class TaskContainer extends Component {
   state = {

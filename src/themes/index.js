@@ -1,11 +1,11 @@
 import blueTheme from './blueTheme';
 import greenTheme from './greenTheme';
 
-export const DEFAULT_THEME = "greenTheme";
+export const DEFAULT_THEME = 'greenTheme';
 
 const themes = {
   blueTheme,
-  greenTheme
+  greenTheme,
 };
 
 export default themes;

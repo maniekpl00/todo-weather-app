@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledMenuDrawer } from './MenuDrawer.styles';
+import { StyledMenuDrawer } from './index.styles';
 
 const MenuDrawer = ({ children }) => <StyledMenuDrawer>{children}</StyledMenuDrawer>;
 

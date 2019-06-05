@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl';
 import * as themeActions from '../../store/actions/themeActions';
-import Selector from '../../components/UI/Selector/Selector';
+import Selector from '../../components/UI/Selector';
 import themes from '../../themes';
 import messages from './messages';
 

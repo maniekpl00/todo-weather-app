@@ -1,3 +1,3 @@
 export default {
-  weatherWidth: "400px"
-}
+  weatherWidth: '400px',
+};
