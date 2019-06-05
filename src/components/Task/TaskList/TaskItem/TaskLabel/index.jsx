@@ -6,7 +6,7 @@ import {
   TaskBottomWrapper,
   TaskTagSpan,
   TaskTermWrapper,
-  TaskTermSpan
+  TaskTermSpan,
 } from './index.styles';
 
 const TaskLabel = ({ name, tag, finished, term, termAlerted }) => (

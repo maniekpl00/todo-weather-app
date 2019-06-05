@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyledSpinner, Div } from './index.styles';
+import { StyledSpinner } from './index.styles';
 
 const Spinner = props => (
-	<StyledSpinner>
-		<Div />
-		<Div />
-		<Div />
-		<Div />
-	</StyledSpinner>
+  <StyledSpinner>
+    <div />
+    <div />
+    <div />
+    <div />
+  </StyledSpinner>
 );
 
 export default Spinner;

@@ -23,5 +23,5 @@ export default {
     const tasks = this.loadTasks().filter(task => task.id !== taskId);
     localStorage.setItem(TASKS_KEY, JSON.stringify(tasks));
     return tasks;
-  }
+  },
 };

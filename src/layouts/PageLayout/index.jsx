@@ -6,21 +6,21 @@ import GlobalStyle from '../../themes/globalStyles';
 import { StyledPageLayout, ChildrenContainer } from './index.styles';
 
 const PageLayout = props => {
-	const { children, theme } = props;
-	return (
-		<ThemeProvider theme={themes[theme]}>
-			<StyledPageLayout>
-				<GlobalStyle />
-				<ChildrenContainer>{children}</ChildrenContainer>
-			</StyledPageLayout>
-		</ThemeProvider>
-	);
+  const { children, theme } = props;
+  return (
+    <ThemeProvider theme={themes[theme]}>
+      <StyledPageLayout>
+        <GlobalStyle />
+        <ChildrenContainer>{children}</ChildrenContainer>
+      </StyledPageLayout>
+    </ThemeProvider>
+  );
 };
 
 function mapStateToProps(state) {
-	return {
-		theme: state.theme,
-	};
+  return {
+    theme: state.theme,
+  };
 }
 
 export default connect(mapStateToProps)(PageLayout);

@@ -18,8 +18,8 @@ export const AddButton = styled.button`
   border: none;
   border-radius: 50%;
   cursor: pointer;
-`
+`;
 
 export const AddParagraph = styled.p`
   margin-left: 10px;
-`
+`;

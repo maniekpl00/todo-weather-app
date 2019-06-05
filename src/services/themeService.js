@@ -11,5 +11,5 @@ export default {
   changeTheme(theme) {
     localStorage.setItem(THEME_KEY, theme);
     return theme;
-  }
+  },
 };
