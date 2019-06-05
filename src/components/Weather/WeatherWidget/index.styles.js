@@ -52,7 +52,7 @@ export const WeatherIcon = styled.div`
 
   @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
     img {
-      transform: scale(1.8);
+      transform: scale(1.5);
     }
   }
 `;
