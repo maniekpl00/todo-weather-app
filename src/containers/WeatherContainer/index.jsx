@@ -3,14 +3,16 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import WeatherWrapper from '../../components/Weather/WeatherWrapper';
 import weatherApi from '../../api/weatherApi';
-import CurrentDate from '../../components/Weather/CurrentDate';
 import WeatherWidget from '../../components/Weather/WeatherWidget';
 import Spinner from '../../components/UI/Spinner';
+import { HOUR_FORMAT } from './constants';
+import DateHandler from '../DateHandler';
 
 class WeatherContainer extends Component {
   state = {
     weather: null,
     loading: false,
+    skyId: moment().format(HOUR_FORMAT),
   };
 
   componentDidMount() {
@@ -19,7 +21,7 @@ class WeatherContainer extends Component {
 
   findCoordinates = () => {
     this.setState({ loading: true });
-    navigator.geolocation.getCurrentPosition(this.fetchWeather, this.handleError);
+    navigator.geolocation.getCurrentPosition(this.fetchWeather, this.errorHandler);
   };
 
   fetchWeather = async position => {
@@ -33,20 +35,26 @@ class WeatherContainer extends Component {
     }
   };
 
-  handleError = () => {
+  errorHandler = () => {
     this.setState({
       loading: false,
     });
   };
 
+  updateSkyTime = skyId => {
+    this.setState({
+      skyId,
+    });
+  };
+
   render() {
-    const { weather, loading } = this.state;
-    const currentDate = moment().format('dddd, DD MMM');
+    const { weather, loading, skyId } = this.state;
     console.log(weather);
+    console.log(skyId);
 
     return (
-      <WeatherWrapper>
-        <CurrentDate date={currentDate} />
+      <WeatherWrapper skyId={skyId}>
+        <DateHandler />
         {loading ? <Spinner /> : weather && <WeatherWidget data={weather} />}
       </WeatherWrapper>
     );

@@ -21,5 +21,6 @@ export const AddButton = styled.button`
 `;
 
 export const AddParagraph = styled.p`
+  color: black;
   margin-left: 10px;
 `;

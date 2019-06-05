@@ -1,0 +1,1 @@
+export const HOUR_FORMAT = 'HH';

@@ -1,5 +1,6 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
+import messages from './messages';
 import {
   StyledWeatherWidget,
   LeftContainer,
@@ -12,7 +13,6 @@ import {
   WindSpeed,
   Humadity,
 } from './index.styles';
-import Clock from '../Clock';
 
 const WeatherWidget = ({ data, intl }) => {
   const { temp, pressure, humidity } = data.main;
@@ -25,18 +25,25 @@ const WeatherWidget = ({ data, intl }) => {
   return (
     <StyledWeatherWidget>
       <LeftContainer>
-        <Clock />
-        <Humadity>Humadity: {humidity}%</Humadity>
-        <Pressure>Pressure: {pressure} hPa</Pressure>
-        <WindSpeed>Wind: {windSpeed} km/h</WindSpeed>
+        <Humadity>
+          {intl.formatMessage({ ...messages.humadity })}: {humidity}%
+        </Humadity>
+        <Pressure>
+          {intl.formatMessage({ ...messages.pressure })}: {pressure} hPa
+        </Pressure>
+        <WindSpeed>
+          {intl.formatMessage({ ...messages.wind })}: {windSpeed} km/h
+        </WindSpeed>
+        <LastUpdateTime>Jun 13 11:02</LastUpdateTime>
       </LeftContainer>
       <RightContainer>
-        <WeatherIcon src={iconSrc} />
+        <WeatherIcon>
+          <img src={iconSrc} alt="" />
+        </WeatherIcon>
         <TemperatureOfLocation>
           {temp.toFixed()}&#8451;, {locationName}
         </TemperatureOfLocation>
         <Description>{description}</Description>
-        <LastUpdateTime>Jun 13 11:02</LastUpdateTime>
       </RightContainer>
     </StyledWeatherWidget>
   );
