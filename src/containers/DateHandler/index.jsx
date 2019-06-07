@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import { DATE_FORMAT, TIME_FORMAT, INTERVAL_TIME } from './constants';
+import { DATE_FORMAT, TIME_FORMAT, INTERVAL_TIME, HOUR_FORMAT } from './constants';
 import DateLabel from '../../components/Date/DateLabel';
 import TimeLabel from '../../components/Date/TimeLabel';
 import DateWrapper from '../../components/Date/DateWrapper';
@@ -18,6 +18,7 @@ class DateHandler extends Component {
         time: _moment.format(TIME_FORMAT),
         date: _moment.format(DATE_FORMAT),
       });
+      this.props.skyUpdated(_moment.format(HOUR_FORMAT));
     }, INTERVAL_TIME);
   }
 

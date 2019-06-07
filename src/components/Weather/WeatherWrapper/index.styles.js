@@ -11,8 +11,7 @@ export const StyledWeatherWrapper = styled.section`
   flex-direction: column;
   padding: 15px 20px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-  /* background-image: linear-gradient(black, ${props => props.theme.primaryColor}); */
-  background-image: linear-gradient(to bottom, #757abf 0%,#8583be 60%,#eab0d1 100%);
+  background-image: ${props => props.skyGradient};
 
   @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
     padding: 80px 20px;

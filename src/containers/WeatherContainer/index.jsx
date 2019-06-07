@@ -5,14 +5,14 @@ import WeatherWrapper from '../../components/Weather/WeatherWrapper';
 import weatherApi from '../../api/weatherApi';
 import WeatherWidget from '../../components/Weather/WeatherWidget';
 import Spinner from '../../components/UI/Spinner';
-import { HOUR_FORMAT } from './constants';
+import { HOUR_FORMAT, SKY_GRADIENT } from './constants';
 import DateHandler from '../DateHandler';
 
 class WeatherContainer extends Component {
   state = {
     weather: null,
     loading: false,
-    skyId: moment().format(HOUR_FORMAT),
+    skyGradient: SKY_GRADIENT[moment().format(HOUR_FORMAT)],
   };
 
   componentDidMount() {
@@ -41,20 +41,18 @@ class WeatherContainer extends Component {
     });
   };
 
-  updateSkyTime = skyId => {
+  skyUpdate = hour => {
     this.setState({
-      skyId,
+      skyGradient: SKY_GRADIENT[hour],
     });
   };
 
   render() {
-    const { weather, loading, skyId } = this.state;
-    console.log(weather);
-    console.log(skyId);
+    const { weather, loading, skyGradient } = this.state;
 
     return (
-      <WeatherWrapper skyId={skyId}>
-        <DateHandler />
+      <WeatherWrapper skyGradient={skyGradient}>
+        <DateHandler skyUpdated={this.skyUpdate} />
         {loading ? <Spinner /> : weather && <WeatherWidget data={weather} />}
       </WeatherWrapper>
     );
