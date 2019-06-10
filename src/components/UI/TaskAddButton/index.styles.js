@@ -21,5 +21,6 @@ export const AddButton = styled.button`
 `;
 
 export const AddParagraph = styled.p`
+  color: ${props => props.theme.primaryColor};
   margin-left: 10px;
 `;

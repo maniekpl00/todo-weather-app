@@ -3,18 +3,19 @@ import mediaQueries from '../../../styles/mediaQueries';
 
 export const StyledBurgerIcon = styled.div`
   position: absolute;
-  top: 15px;
-  right: 20px;
-  width: 30px;
-  height: 20px;
+  top: 10px;
+  right: 10px;
+  width: 25px;
   z-index: 600;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
 
   path {
-    color: ${props => (props.open ? props.theme.primaryColor : 'white')};
+    fill: ${props => props.theme.primaryColor};
   }
 
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     left: 20px;
     right: unset;
+    width: 30px;
   }
 `;

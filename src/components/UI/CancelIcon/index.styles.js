@@ -4,8 +4,9 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 export const StyledCancelIcon = styled(ArrowDownwardIcon)`
   && {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    top: 10px;
+    right: 10px;
+    width: 25px;
     width: 1.8rem;
     height: 1.8rem;
     border: 2px solid ${props => props.theme.primaryColor};

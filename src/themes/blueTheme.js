@@ -1,7 +1,8 @@
-const darkTheme = {
+const blueTheme = {
   taskBackgroundColor: '#fff',
   primaryColor: '#3949AB',
-  color: 'black',
+  taskColor: 'black',
+  color: 'white',
 };
 
-export default darkTheme;
+export default blueTheme;

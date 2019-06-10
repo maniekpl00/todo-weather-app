@@ -1,14 +1,20 @@
 import styled from 'styled-components';
 import { Delete as DeleteIcon } from '@material-ui/icons';
+import mediaQueries from '../../../../styles/mediaQueries';
 
 export const StyledTaskItem = styled.li`
   max-height: 20%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 15px 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 `;
+
+export const CheckBoxWrapper = styled.div`
+  margin: 0 10px;
+`
 
 export const CheckBox = styled.input`
   display: block;
@@ -18,6 +24,7 @@ export const CheckBox = styled.input`
   height: 25px;
 
   &::before {
+    box-sizing: inherit;
     visibility: initial;
     display: flex;
     align-items: center;
@@ -41,6 +48,11 @@ export const CheckBox = styled.input`
       content: '✓';
       background-color: ${props => props.theme.primaryColor};
     }
+  }
+
+  @media (min-width: ${mediaQueries.ipadMaxWidth}) {
+    width: 35px;
+    height: 35px;
   }
 `;
 

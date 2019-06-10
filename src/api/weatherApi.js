@@ -1,49 +1,50 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://api.openweathermap.org/data/2.5',
+  baseURL: 'https://api.openweathermap.org/data/2.5',
 });
 
 const data = {
   coord: {
-    lon: 19.02,
-    lat: 50.26,
+    lon: 19.98,
+    lat: 50.08,
   },
   weather: [
     {
-      id: 800,
-      main: 'Clear',
-      description: 'clear sky',
-      icon: '01n',
+      id: 803,
+      main: 'Clouds',
+      description: 'broken clouds',
+      icon: '04d',
     },
   ],
   base: 'stations',
   main: {
-    temp: 14.92,
-    pressure: 1023,
-    humidity: 71,
-    temp_min: 12.78,
-    temp_max: 17.22,
+    temp: 25.64,
+    pressure: 1012,
+    humidity: 60,
+    temp_min: 24,
+    temp_max: 28.33,
   },
   visibility: 10000,
   wind: {
-    speed: 0.5,
+    speed: 5.7,
+    deg: 60,
   },
   clouds: {
-    all: 0,
+    all: 75,
   },
-  dt: 1559334959,
+  dt: 1559732239,
   sys: {
     type: 1,
-    id: 1705,
-    message: 0.0065,
+    id: 1701,
+    message: 0.0054,
     country: 'PL',
-    sunrise: 1559270389,
-    sunset: 1559328217,
+    sunrise: 1559702005,
+    sunset: 1559760234,
   },
   timezone: 7200,
-  id: 3096472,
-  name: 'Katowice',
+  id: 3088150,
+  name: 'Prądnik Czerwony',
   cod: 200,
 };
 

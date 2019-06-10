@@ -1,7 +1,8 @@
-const lightTheme = {
+const greenTheme = {
   taskBackgroundColor: '#fff',
   primaryColor: '#388E3C',
-  color: 'black',
+  taskColor: 'black',
+  color: 'white',
 };
 
-export default lightTheme;
+export default greenTheme;
