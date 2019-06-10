@@ -10,6 +10,7 @@ export const StyledModal = styled.div`
   transform: ${props => (props.show ? 'translateY(0)' : 'translateY(100%)')};
   z-index: 500;
   transition: 0.3s;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.6);
 `;
 
 export const ModalWrapper = styled.div`

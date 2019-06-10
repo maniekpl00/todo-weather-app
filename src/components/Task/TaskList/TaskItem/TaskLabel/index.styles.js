@@ -1,9 +1,15 @@
 import styled from 'styled-components';
+import mediaQueries from '../../../../../styles/mediaQueries';
 
 export const StyledTaskLabel = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+
+  @media (min-width: ${mediaQueries.desktopLargeMaxWidth}) {
+    width: 85%;
+  }
 `;
 
 const Span = styled.span`

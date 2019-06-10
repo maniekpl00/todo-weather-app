@@ -18,6 +18,7 @@ export const FormControl = styled(_FormControl)`
 
     div {
       color: inherit;
+      font: inherit;
 
       &::before,
       &::after {

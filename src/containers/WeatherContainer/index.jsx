@@ -27,8 +27,8 @@ class WeatherContainer extends Component {
   fetchWeather = async position => {
     const { latitude, longitude } = position.coords;
     try {
-      // const response = await weatherApi.fetchWeather(latitude, longitude);
-      const response = await weatherApi.fetchMockWeather(latitude, longitude);
+      const response = await weatherApi.fetchWeather(latitude, longitude);
+      // const response = await weatherApi.fetchMockWeather(latitude, longitude);
       this.setState({ weather: response.data, loading: false });
     } catch (err) {
       this.setState({ loading: false });

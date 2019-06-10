@@ -18,7 +18,16 @@ export const ChildrenContainer = styled.main`
   flex-direction: column;
   height: 100%;
 
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+  @media (min-width: ${mediaQueries.mobileMaxWidth}) {
+    font-size: 1.1rem;
+  }
+
+  @media (min-width: ${mediaQueries.ipadMaxWidth}) {
+    font-size: 1.4rem;
+  }
+
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
+    font-size: 1.5rem;
     flex-direction: row;
   }
 `;

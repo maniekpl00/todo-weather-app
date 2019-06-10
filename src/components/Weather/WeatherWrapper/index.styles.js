@@ -11,12 +11,15 @@ export const StyledWeatherWrapper = styled.section`
   flex-direction: column;
   padding: 15px 20px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-  background-image: ${props => props.skyGradient};
+  background: ${props => props.skyGradient};
 
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+  @media (min-width: ${mediaQueries.mobileMaxWidth}) {
+    padding: 20px 25px;
+  }
+
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     padding: 80px 20px;
     height: auto;
     width: ${constants.weatherWidth};
-    font-size: 1.2rem;
   }
 `;

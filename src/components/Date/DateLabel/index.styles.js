@@ -6,7 +6,7 @@ export const StyledDateLabel = styled.span`
   font-weight: bold;
   font-size: 1.2em;
 
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     font-size: 1.4em;
     letter-spacing: 4px;
   }

@@ -15,7 +15,7 @@ export const StyledMenuWrapper = styled.section`
     pointer-events: all;
   }
 
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     width: ${constants.weatherWidth};
   }
 `;

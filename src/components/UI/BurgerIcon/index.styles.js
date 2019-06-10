@@ -13,7 +13,7 @@ export const StyledBurgerIcon = styled.div`
     fill: ${props => props.theme.primaryColor};
   }
 
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     left: 20px;
     right: unset;
     width: 30px;

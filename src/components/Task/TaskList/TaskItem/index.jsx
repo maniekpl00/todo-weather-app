@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import * as taskActions from '../../../../store/actions/taskActions';
-import { StyledTaskItem, CheckBox, DeleteButton } from './index.styles';
+import { StyledTaskItem, CheckBoxWrapper, CheckBox, DeleteButton } from './index.styles';
 import TaskLabel from './TaskLabel';
 
 class TaskItem extends Component {
@@ -54,7 +54,9 @@ class TaskItem extends Component {
 
     return (
       <StyledTaskItem>
-        <CheckBox type="checkbox" checked={finished} onChange={this.checkChangeHandler} />
+        <CheckBoxWrapper>
+          <CheckBox type="checkbox" checked={finished} onChange={this.checkChangeHandler} />
+        </CheckBoxWrapper>
         <TaskLabel name={name} tag={tag} finished={finished} term={parsedTerm} termAlerted={termAlerted} />
         <DeleteButton onClick={this.removeTaskClickHandler} />
       </StyledTaskItem>

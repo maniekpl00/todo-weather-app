@@ -7,9 +7,12 @@ export const StyledWeatherWidget = styled.div`
   display: flex;
   font-size: 0.8em;
 
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+  @media (min-width: ${mediaQueries.ipadMaxWidth}) {
+    font-size: 0.9em;
+  }
+
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     flex-direction: column;
-    font-size: 1em;
   }
 `;
 
@@ -20,7 +23,11 @@ export const LeftContainer = styled.section`
   flex-direction: column;
   justify-content: space-around;
 
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+  @media (min-width: ${mediaQueries.ipadMaxWidth}), (orientation: landscape) {
+    align-items: center;
+  }
+
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     flex-basis: 50%;
     margin-right: 0;
     align-items: center;
@@ -50,7 +57,7 @@ export const WeatherIcon = styled.div`
     transform: scale(1.2);
   }
 
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     img {
       transform: scale(1.5);
     }
@@ -60,10 +67,6 @@ export const WeatherIcon = styled.div`
 export const TemperatureOfLocation = styled.span`
   display: flex;
   font-weight: bold;
-
-  @media (min-width: ${mediaQueries.desktopMaxWidthLarge}) {
-    font-size: 1.2em;
-  }
 `;
 
 export const Description = styled.span`
