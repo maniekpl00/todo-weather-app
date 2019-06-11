@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import mediaQueries from '../../../styles/mediaQueries';
 
 export const StyledModal = styled.div`
   position: absolute;
@@ -9,8 +10,12 @@ export const StyledModal = styled.div`
   height: 100%;
   transform: ${props => (props.show ? 'translateY(0)' : 'translateY(100%)')};
   z-index: 500;
-  transition: 0.3s;
-  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.6);
+  transition: ${props => (props.displayOnBiggerScreen ? 'unset' : '0.3s')};
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 20%);
+
+  @media (min-width: ${mediaQueries.desktopLargeMaxWidth}) {
+    transform: ${props => (props.show || props.displayOnBiggerScreen ? 'translateY(0)' : 'translateY(100%)')};
+  }
 `;
 
 export const ModalWrapper = styled.div`

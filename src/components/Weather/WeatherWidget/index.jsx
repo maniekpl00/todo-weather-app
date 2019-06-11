@@ -1,5 +1,6 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
+import moment from 'moment';
 import messages from './messages';
 import {
   StyledWeatherWidget,
@@ -21,6 +22,9 @@ const WeatherWidget = ({ data, intl }) => {
   const locationName = data.name;
   const windSpeed = (data.wind.speed * 3.6).toFixed(2);
   const iconSrc = `http://openweathermap.org/img/w/${icon}.png`;
+  const lastUpdateTime = moment(data.dt * 1000)
+    .startOf('hour')
+    .fromNow();
 
   return (
     <StyledWeatherWidget>
@@ -34,7 +38,9 @@ const WeatherWidget = ({ data, intl }) => {
         <WindSpeed>
           {intl.formatMessage({ ...messages.wind })}: {windSpeed} km/h
         </WindSpeed>
-        <LastUpdateTime>Jun 13 11:02</LastUpdateTime>
+        <LastUpdateTime>
+          {intl.formatMessage({ ...messages.updatedTime })}: {lastUpdateTime}
+        </LastUpdateTime>
       </LeftContainer>
       <RightContainer>
         <WeatherIcon>

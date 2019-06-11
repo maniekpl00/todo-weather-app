@@ -18,7 +18,6 @@ export const FormControl = styled(_FormControl)`
 
     div {
       color: inherit;
-      font: inherit;
 
       &::before,
       &::after {
@@ -30,7 +29,7 @@ export const FormControl = styled(_FormControl)`
 
 export const Select = styled(_Select)`
   && {
-    font-size: 1.2rem;
+    font-size: 1.1em;
   }
 `;
 

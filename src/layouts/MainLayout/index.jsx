@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import themes from '../../themes';
-import GlobalStyle from '../../themes/globalStyles';
+import GlobalStyle from '../../styles/globalStyles';
 import { StyledPageLayout, ChildrenContainer } from './index.styles';
 
 const PageLayout = props => {

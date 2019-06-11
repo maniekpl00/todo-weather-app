@@ -14,5 +14,9 @@ export default defineMessages({
   wind: {
     id: `${scope}.wind`,
     defaultMessage: 'Wind',
+  },
+  updatedTime: {
+    id: `${scope}.updatedTime`,
+    defaultMessage: 'Updated',
   }
 });

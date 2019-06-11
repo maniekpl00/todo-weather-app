@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://api.openweathermap.org/data/2.5',
+  baseURL: 'https://maniekpl00-weather-service.herokuapp.com/api',
 });
 
 const data = {
@@ -61,7 +61,6 @@ export default {
       lat: latitude,
       lon: longitude,
       units: 'metric',
-      APPID: process.env.REACT_APP_APPID,
     };
     return instance.get(`/weather`, { params });
   },

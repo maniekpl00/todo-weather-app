@@ -12,7 +12,7 @@ class DateHandler extends Component {
 
   componentDidMount() {
     const timeoutTime = (60 - moment().format(SECOND_FORMAT)) * 1000;
-    setTimeout(() => {
+    this.timeoutId = setTimeout(() => {
       this.updateDateAndSky();
       this.intervalId = setInterval(() => this.updateDateAndSky(), INTERVAL_TIME);
     }, timeoutTime);
@@ -20,6 +20,7 @@ class DateHandler extends Component {
 
   componentWillUnmount() {
     clearInterval(this.intervalId);
+    clearTimeout(this.timeoutId);
   }
 
   updateDateAndSky = () => {

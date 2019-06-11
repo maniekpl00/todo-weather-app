@@ -17,20 +17,19 @@ export const StyledWeatherWidget = styled.div`
 `;
 
 export const LeftContainer = styled.section`
-  flex-basis: 40%;
+  flex-basis: 45%;
   margin-right: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 
-  @media (min-width: ${mediaQueries.ipadMaxWidth}), (orientation: landscape) {
+  @media (min-width: ${mediaQueries.mobileMaxWidth}), (orientation: landscape) {
     align-items: center;
   }
 
   @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     flex-basis: 50%;
     margin-right: 0;
-    align-items: center;
     order: 1;
   }
 `;
@@ -73,9 +72,17 @@ export const Description = styled.span`
   &::first-letter {
     text-transform: uppercase;
   }
+
+  @media (min-width: ${mediaQueries.mobileMaxWidth}), (orientation: landscape) {
+    text-align: center;
+  }
 `;
 
-export const LastUpdateTime = styled.div``;
+export const LastUpdateTime = styled.div`
+  @media (min-width: ${mediaQueries.mobileMaxWidth}), (orientation: landscape) {
+    text-align: center;
+  }
+`;
 
 export const Pressure = styled.span``;
 

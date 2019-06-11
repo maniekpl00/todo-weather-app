@@ -6,4 +6,8 @@ export default {
   tasks: taskService.loadTasks(),
   theme: themeService.loadTheme(),
   language: languageService.loadLanguage(),
+  weatherData: {
+    weather: null,
+    loading: false
+  }
 };

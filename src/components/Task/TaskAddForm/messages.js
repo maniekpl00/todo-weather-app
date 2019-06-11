@@ -9,7 +9,7 @@ export default defineMessages({
   },
   placeholderName: {
     id: `${scope}.placeholderName`,
-    defaultMessage: 'Task name',
+    defaultMessage: 'Name',
   },
   placeholderTag: {
     id: `${scope}.placeholderTag`,

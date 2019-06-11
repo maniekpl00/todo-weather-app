@@ -9,12 +9,12 @@ export const StyledTaskItem = styled.li`
   align-items: center;
   justify-content: space-around;
   padding: 15px 0;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.12);
 `;
 
 export const CheckBoxWrapper = styled.div`
   margin: 0 10px;
-`
+`;
 
 export const CheckBox = styled.input`
   display: block;
@@ -22,6 +22,7 @@ export const CheckBox = styled.input`
   visibility: hidden;
   width: 25px;
   height: 25px;
+  cursor: pointer;
 
   &::before {
     box-sizing: inherit;
@@ -59,9 +60,14 @@ export const CheckBox = styled.input`
 export const DeleteButton = styled(DeleteIcon)`
   && {
     font-size: 2rem;
+    cursor: pointer;
 
     path {
       color: ${props => props.theme.primaryColor};
+    }
+
+    @media (min-width: ${mediaQueries.desktopMaxWidth}) {
+      font-size: 2.5rem;
     }
   }
 `;

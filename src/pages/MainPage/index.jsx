@@ -1,5 +1,5 @@
 import React from 'react';
-import PageLayout from '../../layouts/PageLayout';
+import MainLayout from '../../layouts/MainLayout';
 import WeatherContainer from '../../containers/WeatherContainer';
 import TaskContainer from '../../containers/TaskContainer';
 import withLanguage from '../../hoc/withLanguage';
@@ -7,11 +7,11 @@ import MenuContainer from '../../containers/MenuContainer';
 
 const MainPage = props => {
   return (
-    <PageLayout>
+    <MainLayout>
       <WeatherContainer />
       <TaskContainer />
       <MenuContainer />
-    </PageLayout>
+    </MainLayout>
   );
 };
 

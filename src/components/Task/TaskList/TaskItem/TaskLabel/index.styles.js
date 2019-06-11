@@ -14,10 +14,13 @@ export const StyledTaskLabel = styled.div`
 
 const Span = styled.span`
   display: block;
-  text-transform: capitalize;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
 `;
 
 export const TaskNameSpan = styled(Span)`

@@ -20,7 +20,7 @@ class MenuContainer extends Component {
 
     return (
       <MenuWrapper>
-        <Modal show={showMenu}>
+        <Modal show={showMenu} displayOnBiggerScreen>
           <MenuDrawer>
             <LanguageSelectHandler />
             <ThemeSelectHandler />
