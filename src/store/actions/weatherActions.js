@@ -28,9 +28,9 @@ export function fetchWeather(latitude, longitude) {
 
     if (weather) {
       const lastUpdatedDate = new Date(weather.dt * 1000);
-      const differenceMinutes = (new Date().getTime() - lastUpdatedDate.getTime()) / 1000000;
+      const differenceMinutes = (new Date().getTime() - lastUpdatedDate.getTime()) / (1000 * 60);
       const { lon, lat } = weather.coord;
-      if (differenceMinutes < 60 && lat === latitude && lon === longitude) {
+      if (differenceMinutes < 60 && lat == latitude && lon == longitude) {
         shouldFetch = false;
       }
     }
@@ -38,7 +38,7 @@ export function fetchWeather(latitude, longitude) {
     if (shouldFetch) {
       dispatch(fetchWeatherStart());
       try {
-        const response = await weatherApi.fetchMockWeather(latitude, longitude);
+        const response = await weatherApi.fetchWeather(latitude, longitude);
         dispatch(fetchWeatherSuccess(response.data));
       } catch (err) {
         dispatch(fetchWeatherFailed());
