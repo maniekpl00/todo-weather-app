@@ -1,17 +1,16 @@
 import * as actionTypes from '../actions/actionTypes';
 import initialState from './initialState';
-import taskService from '../../services/taskService';
 
 export default function tasksReducer(state = initialState.tasks, action) {
   switch (action.type) {
     case actionTypes.ADD_TASK:
-      return taskService.addTask(action.task);
+      return action.tasks;
 
     case actionTypes.REMOVE_TASK:
-      return taskService.removeTask(action.taskId);
+      return action.tasks;
 
     case actionTypes.UPDATE_TASK:
-      return taskService.updateTask(action.task);
+      return action.tasks;
 
     default:
       return state;

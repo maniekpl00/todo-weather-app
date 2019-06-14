@@ -6,4 +6,5 @@ export const StyledMenuDrawer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: ${props => props.theme.primaryColor};
 `;

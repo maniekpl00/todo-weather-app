@@ -53,8 +53,8 @@ class TaskItem extends Component {
     const { parsedTerm, termAlerted } = this.parseTermAndAlertIfToday(term);
 
     return (
-      <StyledTaskItem>
-        <CheckBoxWrapper>
+      <StyledTaskItem finished={finished}>
+        <CheckBoxWrapper finished={finished}>
           <CheckBox type="checkbox" checked={finished} onChange={this.checkChangeHandler} />
         </CheckBoxWrapper>
         <TaskLabel name={name} tag={tag} finished={finished} term={parsedTerm} termAlerted={termAlerted} />

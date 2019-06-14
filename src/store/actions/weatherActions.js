@@ -1,5 +1,12 @@
 import * as actionTypes from './actionTypes';
 import weatherApi from '../../api/weatherApi';
+import weatherService from '../../services/weatherService';
+
+function fetchWeatherStart() {
+  return {
+    type: actionTypes.FETCH_WEATHER_START,
+  };
+}
 
 function fetchWeatherSuccess(weather) {
   return {
@@ -14,21 +21,30 @@ function fetchWeatherFailed() {
   };
 }
 
-function fetchWeatherStart() {
-  return {
-    type: actionTypes.FETCH_WEATHER_START,
-  };
-}
-
 export function fetchWeather(latitude, longitude) {
   return async dispatch => {
-    dispatch(fetchWeatherStart());
+    const weather = weatherService.getWeather();
+    let shouldFetch = true;
 
-    try {
-      const response = await weatherApi.fetchMockWeather(latitude, longitude);
-      dispatch(fetchWeatherSuccess(response.data));
-    } catch (err) {
-      dispatch(fetchWeatherFailed());
+    if (weather) {
+      const lastUpdatedDate = new Date(weather.dt * 1000);
+      const differenceMinutes = (new Date().getTime() - lastUpdatedDate.getTime()) / 1000000;
+      const { lon, lat } = weather.coord;
+      if (differenceMinutes < 60 && lat === latitude && lon === longitude) {
+        shouldFetch = false;
+      }
+    }
+
+    if (shouldFetch) {
+      dispatch(fetchWeatherStart());
+      try {
+        const response = await weatherApi.fetchMockWeather(latitude, longitude);
+        dispatch(fetchWeatherSuccess(response.data));
+      } catch (err) {
+        dispatch(fetchWeatherFailed());
+      }
+    } else {
+      dispatch(fetchWeatherSuccess(weather));
     }
   };
 }

@@ -7,48 +7,41 @@ export const StyledTaskItem = styled.li`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 15px 0;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: ${props =>
+    props.finished ? props.theme.taskFinishedBackgroundColor : props.theme.taskBackgroundColor};
+  color: ${props => props.theme.taskColor};
 `;
 
 export const CheckBoxWrapper = styled.div`
-  margin: 0 10px;
-`;
-
-export const CheckBox = styled.input`
   display: block;
   position: relative;
-  visibility: hidden;
+  margin: 0 15px;
   width: 25px;
   height: 25px;
-  cursor: pointer;
+  background-color: ${props => (props.finished ? props.theme.primaryColor : 'unset')};
+  border: 2px solid ${props => props.theme.primaryColor};
+  border-radius: 50%;
 
-  &::before {
+  &::after {
     box-sizing: inherit;
     visibility: initial;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    content: '';
+    content: '${props => (props.finished ? '✓' : '')}';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid ${props => props.theme.primaryColor};
-    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
     z-index: 2;
-  }
-
-  &:checked {
-    &::before {
-      content: '✓';
-      background-color: ${props => props.theme.primaryColor};
-    }
+    pointer-events: none;
   }
 
   @media (min-width: ${mediaQueries.ipadMaxWidth}) {
@@ -57,8 +50,21 @@ export const CheckBox = styled.input`
   }
 `;
 
+export const CheckBox = styled.input`
+  display: block;
+  position: relative;
+  margin: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+`;
+
 export const DeleteButton = styled(DeleteIcon)`
   && {
+    margin: 0 15px;
     font-size: 2rem;
     cursor: pointer;
 

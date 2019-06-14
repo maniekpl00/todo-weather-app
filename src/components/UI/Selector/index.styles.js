@@ -14,10 +14,14 @@ export const StyledSelector = styled.div`
 export const FormControl = styled(_FormControl)`
   && {
     width: 100%;
-    color: ${props => props.theme.primaryColor};
+    color: inherit;
 
     div {
       color: inherit;
+
+      &:hover:not(.Mui-disabled):before {
+        border-bottom: 1px solid;
+      }
 
       &::before,
       &::after {
@@ -41,7 +45,7 @@ export const MenuItem = styled(_MenuItem)`
 
 export const FormHelperText = styled(_FormHelperText)`
   && {
-    color: ${props => props.theme.primaryColor};
+    color: inherit;
     width: 100%;
   }
 `;

@@ -3,6 +3,7 @@ import mediaQueries from '../../../../../styles/mediaQueries';
 
 export const StyledTaskLabel = styled.div`
   width: 70%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;

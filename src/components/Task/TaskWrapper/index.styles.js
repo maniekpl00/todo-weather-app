@@ -14,4 +14,8 @@ export const StyledTaskWrapper = styled.section`
   @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     max-width: calc(100% - ${constants.weatherWidth});
   }
+
+  @media (min-width: ${mediaQueries.desktopLargeMaxWidth}) {
+    max-width: calc(100% - ${constants.weatherWidth} * 2);
+  }
 `;

@@ -1,6 +1,7 @@
 {
   "LanguageSelectHandler.en": "English",
   "LanguageSelectHandler.pl": "Polish",
+  "MenuContainer.settings": "Settings",
   "Task.TaskAddForm.submitTitle": "Submit task",
   "Task.TaskAddButton.addText": "Add a to-do",
   "Task.TaskAddForm.placeholderName": "Name",

@@ -1,6 +1,7 @@
 {
   "LanguageSelectHandler.en": "Angielski",
   "LanguageSelectHandler.pl": "Polski",
+  "MenuContainer.settings": "Ustawienia",
   "Task.TaskAddForm.submitTitle": "Dodaj zadanie",
   "Task.TaskAddButton.addText": "Dodaj nowe zadanie",
   "Task.TaskAddForm.placeholderName": "Nazwa",

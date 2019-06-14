@@ -1,5 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 import initialState from './initialState';
+import weatherService from '../../services/weatherService';
 
 export default function weatherReducer(state = initialState.weatherData, action) {
   switch (action.type) {
@@ -12,7 +13,7 @@ export default function weatherReducer(state = initialState.weatherData, action)
     case actionTypes.FETCH_WEATHER_SUCCESS:
       return {
         ...state,
-        weather: action.weather,
+        weather: weatherService.saveWeather(action.weather),
         loading: false,
       };
 

@@ -24,7 +24,7 @@ class WeatherContainer extends Component {
 
   fetchWeather = async position => {
     const { latitude, longitude } = position.coords;
-    await this.props.fetchWeather(latitude, longitude);
+    await this.props.fetchWeather(latitude.toFixed(2), longitude.toFixed(2));
   };
 
   skyUpdate = hour => {

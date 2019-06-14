@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 import mediaQueries from '../../../styles/mediaQueries';
 
+// Settings for scoped tag
+const Span = styled.span`
+  padding: 5px 0;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+`;
+
 export const StyledWeatherWidget = styled.div`
   position: relative;
   flex-grow: 1;
@@ -63,12 +72,12 @@ export const WeatherIcon = styled.div`
   }
 `;
 
-export const TemperatureOfLocation = styled.span`
+export const TemperatureOfLocation = styled(Span)`
   display: flex;
   font-weight: bold;
 `;
 
-export const Description = styled.span`
+export const Description = styled(Span)`
   &::first-letter {
     text-transform: uppercase;
   }
@@ -78,14 +87,14 @@ export const Description = styled.span`
   }
 `;
 
-export const LastUpdateTime = styled.div`
+export const LastUpdateTime = styled(Span)`
   @media (min-width: ${mediaQueries.mobileMaxWidth}), (orientation: landscape) {
     text-align: center;
   }
 `;
 
-export const Pressure = styled.span``;
+export const Pressure = styled(Span)``;
 
-export const WindSpeed = styled.span``;
+export const WindSpeed = styled(Span)``;
 
-export const Humadity = styled.span``;
+export const Humadity = styled(Span)``;
