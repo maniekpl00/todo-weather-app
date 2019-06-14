@@ -15,7 +15,7 @@ export const StyledWeatherWrapper = styled.section`
 
   /* overlay to darken weather background */
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;

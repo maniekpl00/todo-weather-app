@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledSpinner } from './index.styles';
 
-const Spinner = props => (
+const Spinner = () => (
   <StyledSpinner>
     <div />
     <div />

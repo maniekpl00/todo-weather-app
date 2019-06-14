@@ -23,7 +23,7 @@ function fetchWeatherStart() {
 export function fetchWeather(latitude, longitude) {
   return async dispatch => {
     dispatch(fetchWeatherStart());
-    
+
     try {
       const response = await weatherApi.fetchMockWeather(latitude, longitude);
       dispatch(fetchWeatherSuccess(response.data));

@@ -5,7 +5,7 @@ import TaskContainer from '../../containers/TaskContainer';
 import withLanguage from '../../hoc/withLanguage';
 import MenuContainer from '../../containers/MenuContainer';
 
-const MainPage = props => {
+const MainPage = () => {
   return (
     <MainLayout>
       <WeatherContainer />

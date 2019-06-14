@@ -18,5 +18,5 @@ export default defineMessages({
   updatedTime: {
     id: `${scope}.updatedTime`,
     defaultMessage: 'Updated',
-  }
+  },
 });

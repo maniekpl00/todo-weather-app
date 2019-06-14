@@ -21,7 +21,7 @@ export default function weatherReducer(state = initialState.weatherData, action)
         ...state,
         loading: false,
       };
-      
+
     default:
       return state;
   }

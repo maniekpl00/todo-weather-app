@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 import * as weatherActions from '../../store/actions/weatherActions';
 import WeatherWrapper from '../../components/Weather/WeatherWrapper';
-import weatherApi from '../../api/weatherApi';
 import WeatherWidget from '../../components/Weather/WeatherWidget';
 import Spinner from '../../components/UI/Spinner';
 import { HOUR_FORMAT, SKY_GRADIENT } from './constants';
@@ -58,5 +57,5 @@ const mapDispatchToProps = {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(WeatherContainer);

@@ -8,6 +8,6 @@ export default {
   language: languageService.loadLanguage(),
   weatherData: {
     weather: null,
-    loading: false
-  }
+    loading: false,
+  },
 };
