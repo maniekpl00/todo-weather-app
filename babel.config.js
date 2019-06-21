@@ -8,6 +8,5 @@ module.exports = {
         fileName: false,
       },
     ],
-    'named-asset-import',
   ],
 };

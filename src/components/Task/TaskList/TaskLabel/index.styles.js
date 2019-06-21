@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mediaQueries from '../../../../../styles/mediaQueries';
+import mediaQueries from '../../../../styles/mediaQueries';
 
 export const StyledTaskLabel = styled.div`
   width: 70%;

@@ -1,2 +1,5 @@
 !src/**
 src/serviceWorker.js
+config/**
+scripts/**
+babel.config.js
