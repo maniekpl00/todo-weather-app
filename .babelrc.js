@@ -4,7 +4,7 @@ module.exports = {
     [
       'styled-components',
       {
-        displayName: process.env.NODE_ENV === 'production' ? false : true,
+        displayName: process.env.NODE_ENV === 'development' ? true : false,
         fileName: false,
       },
     ],
