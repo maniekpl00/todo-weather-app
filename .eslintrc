@@ -1,6 +1,9 @@
 {
   "extends": ["airbnb", "prettier", "prettier/react"],
   "plugins": ["prettier", "react"],
+  "env": {
+    "jest": true
+  },
   "rules": {
     "react/jsx-filename-extension": [
       1,
@@ -8,6 +11,7 @@
         "extensions": [".js", ".jsx"]
       }
     ],
+    "prettier/prettier": "error",
     "import/no-named-as-default-member": 0,
     "react/prop-types": 0,
     "react/prefer-stateless-function": 0,
@@ -21,7 +25,8 @@
     "jsx-a11y/label-has-for": 0,
     "no-use-before-define": 0,
     "no-param-reassign": 0,
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "eqeqeq": 0
   },
   "globals": {
     "window": true,

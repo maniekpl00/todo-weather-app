@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 import * as taskActions from '../../../../store/actions/taskActions';
 import { StyledTaskItem, CheckBoxWrapper, CheckBox, DeleteButton } from './index.styles';
-import TaskLabel from './TaskLabel';
+import TaskLabel from '../TaskLabel';
 
 class TaskItem extends Component {
   checkChangeHandler = event => {
@@ -53,8 +53,8 @@ class TaskItem extends Component {
     const { parsedTerm, termAlerted } = this.parseTermAndAlertIfToday(term);
 
     return (
-      <StyledTaskItem>
-        <CheckBoxWrapper>
+      <StyledTaskItem finished={finished}>
+        <CheckBoxWrapper finished={finished}>
           <CheckBox type="checkbox" checked={finished} onChange={this.checkChangeHandler} />
         </CheckBoxWrapper>
         <TaskLabel name={name} tag={tag} finished={finished} term={parsedTerm} termAlerted={termAlerted} />
@@ -70,5 +70,5 @@ const mapDispatchToProps = {
 
 export default connect(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(TaskItem);

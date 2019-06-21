@@ -3,7 +3,7 @@ import mediaQueries from '../../../styles/mediaQueries';
 import constants from '../../../styles/constants';
 
 export const StyledMenuWrapper = styled.section`
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -17,5 +17,10 @@ export const StyledMenuWrapper = styled.section`
 
   @media (min-width: ${mediaQueries.desktopMaxWidth}) {
     width: ${constants.weatherWidth};
+  }
+
+  @media (min-width: ${mediaQueries.desktopLargeMaxWidth}) {
+    position: relative;
+    box-shadow: -1px 0 3px rgba(0, 0, 0, 0.2);
   }
 `;

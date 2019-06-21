@@ -12,7 +12,7 @@ import messages from './messages';
 
 const TaskAddForm = ({ task, textChanged, dateChanged, submitted, intl }) => {
   const { formatMessage } = intl;
-  console.log('render');
+
   return (
     <StyledTaskAddForm onSubmit={submitted}>
       <InputContainer>

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import constants from '../../../styles/constants';
+import mediaQueries from '../../../styles/mediaQueries';
 
 export const StyledTaskWrapper = styled.section`
   position: relative;
@@ -8,4 +10,12 @@ export const StyledTaskWrapper = styled.section`
   justify-content: flex-end;
   align-items: center;
   background-color: ${props => props.theme.taskBackgroundColor};
-`
+
+  @media (min-width: ${mediaQueries.desktopMaxWidth}) {
+    max-width: calc(100% - ${constants.weatherWidth});
+  }
+
+  @media (min-width: ${mediaQueries.desktopLargeMaxWidth}) {
+    max-width: calc(100% - ${constants.weatherWidth} * 2);
+  }
+`;

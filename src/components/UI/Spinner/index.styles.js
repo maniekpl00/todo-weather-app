@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { animateSpinner } from './animation.styles';
 
 export const StyledSpinner = styled.div`

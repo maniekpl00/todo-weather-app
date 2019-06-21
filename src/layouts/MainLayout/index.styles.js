@@ -23,11 +23,10 @@ export const ChildrenContainer = styled.main`
   }
 
   @media (min-width: ${mediaQueries.ipadMaxWidth}) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   @media (min-width: ${mediaQueries.desktopMaxWidth}) {
-    font-size: 1.5rem;
     flex-direction: row;
   }
 `;

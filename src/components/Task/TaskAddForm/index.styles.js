@@ -4,6 +4,7 @@ import mediaQueries from '../../../styles/mediaQueries';
 
 export const StyledTaskAddForm = styled.form`
   height: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +16,7 @@ export const StyledTaskAddForm = styled.form`
 `;
 
 export const InputContainer = styled.div`
+  margin-top: 15px;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -22,7 +24,7 @@ export const InputContainer = styled.div`
 
 export const TaskInput = styled.input`
   padding: 5px 20px;
-  font-size: 1em;
+  font-size: 0.9em;
   border: none;
   border-bottom: 1px solid ${props => props.theme.primaryColor};
   color: ${props => props.theme.primaryColor};
@@ -64,17 +66,17 @@ export const ErrorMessage = styled.span`
   display: block;
   margin: 0;
   padding-top: 5px;
-  font-size: 0.8em;
+  font-size: 0.7em;
   flex-basis: 30px;
   color: red;
 `;
 
 export const TaskSubmitButton = styled.button`
   padding: 10px 20px;
-  font-size: 1em;
+  font-size: 0.8em;
   text-transform: uppercase;
   background-color: ${props => props.theme.primaryColor};
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
 `;

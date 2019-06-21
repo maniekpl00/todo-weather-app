@@ -42,7 +42,7 @@ const mapStateToProps = state => ({
 
 const composedHoc = compose(
   connect(mapStateToProps),
-  withLanguage
+  withLanguage,
 );
 
 export default composedHoc;
