@@ -7,8 +7,6 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "test": "node scripts/test.js"
   },
   "browserslist": {
@@ -105,13 +103,13 @@
     "eslint-plugin-react": "^7.13.0",
     "file-loader": "3.0.1",
     "fs-extra": "7.0.1",
-    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "4.0.0-beta.5",
     "identity-obj-proxy": "3.0.0",
     "is-wsl": "^1.1.0",
     "jest": "24.7.1",
     "jest-environment-jsdom-fourteen": "0.1.0",
     "jest-resolve": "24.7.1",
+    "jest-styled-components": "^6.3.3",
     "jest-watch-typeahead": "0.3.0",
     "mini-css-extract-plugin": "0.5.0",
     "moment": "^2.24.0",

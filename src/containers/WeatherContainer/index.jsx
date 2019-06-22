@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
+import withNavigator from '../../hoc/withNavigator';
 import * as weatherActions from '../../store/actions/weatherActions';
 import WeatherWrapper from '../../components/Weather/WeatherWrapper';
 import WeatherWidget from '../../components/Weather/WeatherWidget';
@@ -9,7 +10,7 @@ import Spinner from '../../components/UI/Spinner';
 import { HOUR_FORMAT, SKY_GRADIENT } from './constants';
 import DateHandler from '../DateHandler';
 
-class WeatherContainer extends Component {
+export class WeatherContainer extends Component {
   state = {
     skyGradient: SKY_GRADIENT[moment().format(HOUR_FORMAT)],
   };
@@ -19,7 +20,7 @@ class WeatherContainer extends Component {
   }
 
   findCoordinates = () => {
-    navigator.geolocation.getCurrentPosition(this.fetchWeather);
+    this.props.getCurrentPosition(this.fetchWeather);
   };
 
   fetchWeather = async position => {
@@ -58,4 +59,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(WeatherContainer);
+)(withNavigator(WeatherContainer));

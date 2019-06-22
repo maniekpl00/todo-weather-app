@@ -5,7 +5,7 @@ import * as taskActions from '../../../../store/actions/taskActions';
 import { StyledTaskItem, CheckBoxWrapper, CheckBox, DeleteButton } from './index.styles';
 import TaskLabel from '../TaskLabel';
 
-class TaskItem extends Component {
+export class TaskItem extends Component {
   checkChangeHandler = event => {
     this.props.updateTask({
       ...this.props.item,

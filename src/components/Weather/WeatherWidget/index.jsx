@@ -15,7 +15,7 @@ import {
   Humadity,
 } from './index.styles';
 
-const WeatherWidget = ({ data, intl }) => {
+export const WeatherWidget = ({ data, intl }) => {
   const { temp, pressure, humidity } = data.main;
   const { icon, id } = data.weather[0];
   const description = intl.formatMessage({ id: `Weather.WeatherWidget.${id}` });
