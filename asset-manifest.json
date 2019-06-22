@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/todo-weather-app/static/js/main.14ef34a2.chunk.js",
+    "main.js.map": "/todo-weather-app/static/js/main.14ef34a2.chunk.js.map",
+    "runtime~main.js": "/todo-weather-app/static/js/runtime~main.f8b9f20c.js",
+    "runtime~main.js.map": "/todo-weather-app/static/js/runtime~main.f8b9f20c.js.map",
+    "static/js/2.987a9fe2.chunk.js": "/todo-weather-app/static/js/2.987a9fe2.chunk.js",
+    "static/js/2.987a9fe2.chunk.js.map": "/todo-weather-app/static/js/2.987a9fe2.chunk.js.map",
+    "index.html": "/todo-weather-app/index.html",
+    "precache-manifest.6d49fdfd3a19bb03c1e6d1e6fe09aaad.js": "/todo-weather-app/precache-manifest.6d49fdfd3a19bb03c1e6d1e6fe09aaad.js",
+    "service-worker.js": "/todo-weather-app/service-worker.js",
+    "static/media/bars-solid.b3f49afd.svg": "/todo-weather-app/static/media/bars-solid.b3f49afd.svg",
+    "static/media/times-solid.2c5552a1.svg": "/todo-weather-app/static/media/times-solid.2c5552a1.svg"
+  }
+}
